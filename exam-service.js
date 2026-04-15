@@ -63,10 +63,13 @@ export class ExamService {
       dept_user_name: deptUserName
     };
 
+    console.log('请求数据:', JSON.stringify(data, null, 2));
     const result = await apiClient.request('POST', '/exam/exam/create', data);
 
-    if (result.code === '200') {
-      return result.data.data;
+    console.log('API响应:', JSON.stringify(result, null, 2));
+
+    if (result.code === '200' || result.code === 200) {
+      return result.data.data || result.data;
     }
     throw new Error(result.message || '出题失败');
   }

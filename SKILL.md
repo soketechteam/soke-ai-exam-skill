@@ -1,5 +1,5 @@
 ---
-name: ai-exam
+name: soke-ai-exam-skill
 description: AI智能出题考试系统 - 基于文档自动生成考试、指派学员并查询结果
 version: 1.0.0
 author: AI Assistant
